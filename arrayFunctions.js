@@ -10,7 +10,13 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+  if (numbers.length % 2 === 1) {
+    return true;
+  }
+  return false;
 }
+console.log(isArrayLengthOdd([1, 2, 3]));
+console.log(isArrayLengthOdd([1, 2, 3, 4]));
 
 /**
  * isArrayLengthEven(numbers):
@@ -24,7 +30,13 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  if (numbers.length % 2 === 0) {
+    return true;
+  }
+  return false;
 }
+console.log(isArrayLengthEven([1, 2, 3]));
+console.log(isArrayLengthEven([1, 2, 3, 4])); 
 
 /**
  * addLailaToArray(instructors):
@@ -36,7 +48,10 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  instructors.push("Laila");
+  return instructors;
 }
+console.log(addLailaToArray(["Mshary", "Hasan"]));
 
 /**
  * eliminateTeam(teams):
@@ -48,7 +63,11 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+  teams = teams.pop();
+  return teams;
 }
+console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
+
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -62,7 +81,15 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  let elemNums = Math.round(fruits.length/2);
+  if (elemNums % 2 == 0) {
+    return fruits.slice(-elemNums);
+  } else if (elemNums % 2 == 1) {
+    return fruits = [];
+  }
 }
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]));
 
 /**
  * youGottaCalmDown(shout):
@@ -80,4 +107,16 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  let shoutIndex = shout.indexOf("!");
+  if (shoutIndex == -1) {
+    return shout;
+  } else {
+    return shout.slice(0, shoutIndex + 1);
+  }
+
 }
+
+console.log(youGottaCalmDown("HI!!!!!!!!!!"))
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
+console.log(youGottaCalmDown("Hellooooo"));
+
