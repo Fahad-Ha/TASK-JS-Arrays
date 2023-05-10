@@ -81,9 +81,9 @@ console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
-  let elemNums = Math.round(fruits.length/2);
+  let elemNums = Math.round(fruits.length);
   if (elemNums % 2 == 0) {
-    return fruits.slice(-elemNums);
+    return fruits.slice(elemNums/2);
   } else if (elemNums % 2 == 1) {
     return fruits = [];
   }
